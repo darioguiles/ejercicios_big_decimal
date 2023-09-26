@@ -49,7 +49,8 @@ public class InteresCompuesto {
 
     public BigDecimal calculaMontoFinal() {
         //TODO
-        return null;
+        BigDecimal resultado = (this.p.multiply((this.r.add(new BigDecimal(1))).pow(this.n)));
+        return resultado;
     }
 
 
