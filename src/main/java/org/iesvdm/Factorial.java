@@ -32,7 +32,16 @@ public class Factorial {
 
     public BigInteger calcula() {
         //TODO
-        return null;
+        long numeroAFactorizar= this.getN();
+        BigInteger resultado = BigInteger.valueOf(numeroAFactorizar) ;
+
+        for (long i = 1; i < numeroAFactorizar ; i++) {
+            resultado=resultado.multiply(BigInteger.valueOf(numeroAFactorizar-(i)));
+        }
+
+        return resultado;
     }
+
+
 
 }
