@@ -18,7 +18,7 @@ public class haversineTest {
 
                 Extensiones a = new Extensiones();
 
-                BigDecimal distancia = a.DistanciaKm(Igualada, Granada);
+                BigDecimal distancia = a.distanciaKm(Igualada, Granada);
                 BigDecimal distAprox = distancia.setScale(2, RoundingMode.HALF_UP);
 
                 Assertions.assertEquals(new BigDecimal("664.0"), distAprox);
