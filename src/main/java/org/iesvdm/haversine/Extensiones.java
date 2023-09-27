@@ -1,6 +1,7 @@
 package org.iesvdm.haversine;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 public class Extensiones {
     public static final BigDecimal radioTierraKm = new BigDecimal("6378.0");
@@ -33,7 +34,7 @@ public class Extensiones {
         }
         public BigDecimal EnRadianes(BigDecimal valor)
     {
-        BigDecimal resultado = (BigDecimal.valueOf(Math.PI).divide(BigDecimal.valueOf(180))).multiply(valor);
+        BigDecimal resultado = (BigDecimal.valueOf(Math.PI).divide(BigDecimal.valueOf(180), MathContext.DECIMAL128)).multiply(valor);
         return resultado;
     }
 
