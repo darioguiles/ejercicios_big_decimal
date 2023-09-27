@@ -1,28 +1,35 @@
 package org.iesvdm.haversine;
 
-public class Posicion {
+import java.math.BigDecimal;
 
-    private float Latitud;
-    private float Longitud;
-    public Posicion(float latitud, float longitud)
+public class Posicion  {
+
+    private BigDecimal Latitud;
+    private BigDecimal Longitud;
+    public Posicion(BigDecimal latitud, BigDecimal longitud)
     {
         Latitud = latitud;
         Longitud = longitud;
     }
 
-    public float getLatitud() {
-        return Latitud;
-    }
-
-    public void setLatitud(float latitud) {
-        Latitud = latitud;
-    }
-
-    public float getLongitud() {
+    public BigDecimal getLongitud() {
         return Longitud;
     }
 
-    public void setLongitud(float longitud) {
+    public void setLongitud(BigDecimal longitud) {
         Longitud = longitud;
+    }
+
+    public BigDecimal getLatitud() {
+        return Latitud;
+    }
+
+    public void setLatitud(BigDecimal latitud) {
+        Latitud = latitud;
+    }
+
+    public BigDecimal distanciaKm(Posicion granada) {
+
+        return BigDecimal.valueOf(0);
     }
 }
