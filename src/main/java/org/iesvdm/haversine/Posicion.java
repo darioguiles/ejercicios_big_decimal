@@ -28,8 +28,5 @@ public class Posicion  {
         Latitud = latitud;
     }
 
-    public BigDecimal distanciaKm(Posicion granada) {
 
-        return BigDecimal.valueOf(0);
-    }
 }
