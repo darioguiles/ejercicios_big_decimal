@@ -13,12 +13,16 @@ public class Cuenta {
 
     Cliente clienteCuenta;
 
-    public Cuenta(String id, String direccionPago, Boolean estaAbierta, Cliente clienteCuenta) {
+    Carrito carritoCuenta;
+
+    public Cuenta(String id, String direccionPago, Boolean estaAbierta, Cliente clienteCuenta, Carrito carritoCuenta) {
         this.id = id;
         this.direccionPago = direccionPago;
         this.estaAbierta = estaAbierta;
         this.fechaInicio = Date.from(Instant.now());
         this.clienteCuenta= clienteCuenta;
+        this.carritoCuenta=carritoCuenta;
+
     }
 
     public String getId() {

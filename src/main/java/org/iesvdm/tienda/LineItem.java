@@ -1,19 +1,20 @@
 package org.iesvdm.tienda;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LineItem {
     List<Producto> listaProd;
      Integer cantidad;
-     Float precio;
+     BigDecimal precio;
 
     public LineItem(Producto p, Integer cantidad, Float precio) {
         List<Producto> listaProd = new ArrayList<>();
         listaProd.add(p);
         this.listaProd = listaProd;
         this.cantidad=cantidad;
-        this.precio=precio;
+        this.precio=BigDecimal.valueOf(precio);
     }
 
     public List<Producto> getListaProd() {
@@ -29,7 +30,7 @@ public class LineItem {
         this.cantidad=c;
     }
 
-    public Float getPrecio() {
+    public BigDecimal getPrecio() {
         return precio;
     }
 }

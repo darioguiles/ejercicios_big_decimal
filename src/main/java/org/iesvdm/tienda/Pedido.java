@@ -1,6 +1,8 @@
 package org.iesvdm.tienda;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Pedido {
     String numero;
@@ -9,11 +11,15 @@ public class Pedido {
     String direccionEnvio;
     EstadoPedido estadoPedido;
 
-    public Pedido(String numero, Date fechaOrden, String direccionEnvio, EstadoPedido estadoPedido) {
+    List<LineItem> listaLineaProducto;
+    public Pedido(String numero, Date fechaOrden, String direccionEnvio, EstadoPedido estadoPedido, LineItem linea) {
         this.numero = numero;
         this.fechaOrden = fechaOrden;
         this.direccionEnvio = direccionEnvio;
         this.estadoPedido = estadoPedido;
+        listaLineaProducto = new ArrayList<LineItem>();
+        listaLineaProducto.add(linea);
+        this.listaLineaProducto=listaLineaProducto;
     }
 
     public String getNumero() {
