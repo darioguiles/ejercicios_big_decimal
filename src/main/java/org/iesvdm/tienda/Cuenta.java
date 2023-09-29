@@ -11,11 +11,14 @@ public class Cuenta {
     Date fechaInicio;
     Date fechaFin;
 
-    public Cuenta(String id, String direccionPago, Boolean estaAbierta) {
+    Cliente clienteCuenta;
+
+    public Cuenta(String id, String direccionPago, Boolean estaAbierta, Cliente clienteCuenta) {
         this.id = id;
         this.direccionPago = direccionPago;
         this.estaAbierta = estaAbierta;
         this.fechaInicio = Date.from(Instant.now());
+        this.clienteCuenta= clienteCuenta;
     }
 
     public String getId() {
@@ -56,5 +59,9 @@ public class Cuenta {
 
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
+    }
+
+    public Cliente getClienteCuenta() {
+        return clienteCuenta;
     }
 }

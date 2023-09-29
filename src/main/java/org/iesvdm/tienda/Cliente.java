@@ -7,13 +7,19 @@ public class Cliente {
     String telefono;
     String email;
 
-    public Cliente(String id, String direccion, String telefono, String email) {
+    Usuario usuarioCliente;
+
+    public Cliente(String id, String direccion, String telefono, String email, Usuario usuarioCliente) {
         this.id=id;
         this.direccion=direccion;
         this.telefono=telefono;
         this.email=email;
+        this.usuarioCliente=usuarioCliente;
     }
 
+    public Usuario getUsuarioCliente(){
+        return usuarioCliente;
+    }
     public String getId() {
         return id;
     }

@@ -51,4 +51,5 @@ public class Pedido {
     public void setEstadoPedido(EstadoPedido estadoPedido) {
         this.estadoPedido = estadoPedido;
     }
+
 }
